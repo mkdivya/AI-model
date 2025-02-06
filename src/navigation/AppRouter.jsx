@@ -4,6 +4,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // Import your components
 import Homepage from "../pages/Homepage";
 import AboutUs from "../pages/AboutUs";
+import TestimonialsSection from "../pages/TestimonialsSection";
+import ContactUs from "../pages/ContactUs";
 
 const router = createBrowserRouter([
     {
@@ -14,8 +16,14 @@ const router = createBrowserRouter([
         path: '/',
         element: <AboutUs />,
     },
-    
-    
+    {
+        path: '/',
+        element: <TestimonialsSection />,
+    },
+    {
+        path: '/',
+        element: <ContactUs />,
+    },
 ]);
 
 const AppRouter = () => {
