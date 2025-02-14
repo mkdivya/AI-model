@@ -25,8 +25,8 @@ const ClientsSection = () => {
         <div className="relative w-full h-[331px] bg-black overflow-hidden">
             {/* Content container */}
             <div className="relative h-full flex flex-col justify-center">
-                {/* Title */}
-                <h2 className="text-4xl font-bold text-white text-center mb-8">
+                {/* Title with Outline Effect */}
+                <h2 className="text-4xl font-bold text-transparent stroke-text text-center mb-8">
                     Our Clients
                 </h2>
 
@@ -65,7 +65,7 @@ const ClientsSection = () => {
                 </div>
             </div>
 
-            {/* Add required styles for animation */}
+            {/* Add required styles for animation & text outline */}
             <style jsx>{`
                 @keyframes marquee {
                     0% { transform: translateX(0%); }
@@ -80,6 +80,10 @@ const ClientsSection = () => {
                 }
                 .animate-marquee2 {
                     animation: marquee 25s linear infinite;
+                }
+                .stroke-text {
+                    -webkit-text-stroke: 2px white; /* White outline */
+                    color: transparent; /* Transparent fill */
                 }
             `}</style>
         </div>
