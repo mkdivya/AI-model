@@ -1,5 +1,6 @@
 import React from 'react';
-import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const ContactUs = () => {
   const handleSubmit = (e) => {
@@ -21,17 +22,17 @@ const ContactUs = () => {
             <div className="space-y-6 sm:space-y-8 relative z-10 mb-8">
               <div className="flex items-center text-white gap-4">
                 <Phone className="w-5 h-5 flex-shrink-0" />
-                <span className="text-sm sm:text-base">(+1) 510-945-8169</span>
+                <span className="text-sm sm:text-base">+91 88675 70215</span>
               </div>
               
               <div className="flex items-center text-white gap-4">
                 <Mail className="w-5 h-5 flex-shrink-0" />
-                <span className="text-sm sm:text-base break-all">info@smartrak.co</span>
+                <span className="text-sm sm:text-base break-all">pixelamedia@gmail.com</span>
               </div>
               
               <div className="flex items-start text-white gap-4">
                 <MapPin className="w-5 h-5 flex-shrink-0 mt-1" />
-                <span className="text-sm sm:text-base leading-tight">500 S Main Street, Suite 212 Holy Springs NC 27540</span>
+                <span className="text-sm sm:text-base leading-tight">Hassan, 573201</span>
               </div>
             </div>
 
@@ -41,11 +42,16 @@ const ContactUs = () => {
                 <Facebook className="w-5 h-5 text-white" />
               </div>
               <div className="w-10 h-10 bg-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-700 transition-colors">
-                <Twitter className="w-5 h-5 text-white" />
+                <Instagram className="w-5 h-5 text-white" />
               </div>
-              <div className="w-10 h-10 bg-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-700 transition-colors">
-                <Linkedin className="w-5 h-5 text-white" />
-              </div>
+              <a
+                href="https://wa.me/918867570215"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-700 transition-colors"
+              >
+                <FaWhatsapp className="w-5 h-5 text-white" />
+              </a>
             </div>
 
             {/* Background Circles */}
@@ -94,31 +100,6 @@ const ContactUs = () => {
                 className="w-full px-3 sm:px-4 py-2 text-sm sm:text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 placeholder="+1 (555) 000-0000"
               />
-            </div>
-
-            <div>
-              <label className="block text-sm text-gray-600 mb-2 sm:mb-3">Select Subject?</label>
-              <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
-                {['General Inquiry', 'Technical Support', 'Billing Question', 'Partnership'].map((option, index) => (
-                  <label key={index} className="flex items-center">
-                    <input
-                      type="radio"
-                      name="subject"
-                      className="w-4 h-4 text-indigo-600 border-gray-300 focus:ring-indigo-500"
-                    />
-                    <span className="ml-2 text-sm text-gray-600">{option}</span>
-                  </label>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <label className="block text-sm text-gray-600 mb-1">Message</label>
-              <textarea
-                className="w-full px-3 sm:px-4 py-2 text-sm sm:text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                rows="4"
-                placeholder="Write your message..."
-              ></textarea>
             </div>
 
             <button
