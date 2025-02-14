@@ -1,6 +1,13 @@
-import React from 'react';
-import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from 'lucide-react';
-import { FaWhatsapp } from 'react-icons/fa';
+import React from "react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Instagram,
+  Linkedin,
+} from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 const ContactUs = () => {
   const handleSubmit = (e) => {
@@ -10,42 +17,60 @@ const ContactUs = () => {
   return (
     <div className="min-h-screen bg-black flex items-center justify-center px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
       <div className="w-full max-w-6xl">
-        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white text-center mb-8 sm:mb-12">Contact Us</h1>
-        
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-white text-center mb-8 sm:mb-12">
+          Contact Us
+        </h1>
+
         <div className="bg-white rounded-2xl p-4 sm:p-6 lg:p-8 grid md:grid-cols-2 gap-6 lg:gap-8">
-          {/* Left Section */}
+          {/* Contact Information Section */}
           <div className="bg-[#0A0B1A] rounded-xl p-4 sm:p-6 lg:p-8 relative overflow-hidden">
-            <h2 className="text-white text-lg sm:text-xl font-semibold mb-2">Contact Information</h2>
-            <p className="text-gray-400 mb-6 sm:mb-8">Say something to start a chat!</p>
-            
-            {/* Contact Info - Always horizontal */}
+            <h2 className="text-white text-lg sm:text-xl font-semibold mb-2">
+              Contact Information
+            </h2>
+            <p className="text-gray-400 mb-6 sm:mb-8">
+              Say something to start a chat!
+            </p>
+
             <div className="space-y-6 sm:space-y-8 relative z-10 mb-8">
               <div className="flex items-center text-white gap-4">
                 <Phone className="w-5 h-5 flex-shrink-0" />
                 <span className="text-sm sm:text-base">+91 88675 70215</span>
               </div>
-              
+
               <div className="flex items-center text-white gap-4">
                 <Mail className="w-5 h-5 flex-shrink-0" />
-                <span className="text-sm sm:text-base break-all">pixelamedia@gmail.com</span>
+                <span className="text-sm sm:text-base break-all">
+                  pixelamedia@gmail.com
+                </span>
               </div>
-              
+
               <div className="flex items-start text-white gap-4">
                 <MapPin className="w-5 h-5 flex-shrink-0 mt-1" />
-                <span className="text-sm sm:text-base leading-tight">Hassan, 573201</span>
+                <span className="text-sm sm:text-base leading-tight">
+                  Hassan, 573201
+                </span>
               </div>
             </div>
 
-            {/* Social Media Icons - In a row */}
             <div className="flex justify-start gap-4 relative z-10">
-              <div className="w-10 h-10 bg-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-700 transition-colors">
-                <Facebook className="w-5 h-5 text-white" />
-              </div>
-              <div className="w-10 h-10 bg-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-700 transition-colors">
-                <Instagram className="w-5 h-5 text-white" />
-              </div>
               <a
-                href="https://wa.me/918867570215"
+                href="https://www.facebook.com/share/1A3CR5mwDW/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-700 transition-colors"
+              >
+                <Facebook className="w-5 h-5 text-white" />
+              </a>
+              <a
+                href="https://www.instagram.com/pixelamedia.in?igsh=MWptMzlyY3J1dXU2OA=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-700 transition-colors"
+              >
+                <Instagram className="w-5 h-5 text-white" />
+              </a>
+              <a
+                href="https://w.app/pixelamediahassan"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-indigo-600 rounded-full flex items-center justify-center hover:bg-indigo-700 transition-colors"
@@ -53,21 +78,15 @@ const ContactUs = () => {
                 <FaWhatsapp className="w-5 h-5 text-white" />
               </a>
             </div>
-
-            {/* Background Circles */}
-            <div className="absolute bottom-0 right-0 transform translate-x-1/4 translate-y-1/4">
-              <div className="w-24 sm:w-32 h-24 sm:h-32 bg-indigo-900 rounded-full opacity-20"></div>
-            </div>
-            <div className="absolute bottom-0 right-0 transform translate-x-1/2 translate-y-1/2">
-              <div className="w-32 sm:w-40 h-32 sm:h-40 bg-indigo-800 rounded-full opacity-20"></div>
-            </div>
           </div>
 
-          {/* Right Section - Complete Form */}
+          {/* Contact Form Section */}
           <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
               <div>
-                <label className="block text-sm text-gray-600 mb-1">First Name</label>
+                <label className="block text-sm text-gray-600 mb-1">
+                  First Name
+                </label>
                 <input
                   type="text"
                   className="w-full px-3 sm:px-4 py-2 text-sm sm:text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
@@ -75,7 +94,9 @@ const ContactUs = () => {
                 />
               </div>
               <div>
-                <label className="block text-sm text-gray-600 mb-1">Last Name</label>
+                <label className="block text-sm text-gray-600 mb-1">
+                  Last Name
+                </label>
                 <input
                   type="text"
                   className="w-full px-3 sm:px-4 py-2 text-sm sm:text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
@@ -94,7 +115,9 @@ const ContactUs = () => {
             </div>
 
             <div>
-              <label className="block text-sm text-gray-600 mb-1">Phone Number</label>
+              <label className="block text-sm text-gray-600 mb-1">
+                Phone Number
+              </label>
               <input
                 type="tel"
                 className="w-full px-3 sm:px-4 py-2 text-sm sm:text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
