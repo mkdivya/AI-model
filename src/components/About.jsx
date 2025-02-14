@@ -1,41 +1,32 @@
-import React from 'react';
-import Rocket from '../assets/images/Rocket.png';
+import React from "react";
+import journey from "../assets/images/PeopleBench.png";
 
 const AboutUs = () => {
     return (
-        <div className="bg-[#080915] min-h-screen w-full flex items-center px-4 md:px-8 lg:px-16 relative overflow-hidden">
-            <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
-                {/* Left side with rocket and gradient effect */}
-                <div className="w-full md:w-1/2 flex justify-center md:justify-center relative">
-                    {/* Gradient background */}
-                    <div
-                        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-[500px] max-h-[500px] opacity-30"
-                        style={{
-                            background: 'radial-gradient(circle, rgba(88, 28, 235, 0.8) 0%, rgba(37, 7, 128, 0.4) 45%, rgba(8, 9, 21, 0) 70%)',
-                        }}
-                    />
-                    
-                    {/* Rocket with animation */}
-                    <div className="relative z-10 animate-[bounce_3s_ease-in-out_infinite]">
+        <>
+            {/* Journey Section */}
+            <div className="w-full bg-gray-100 rounded-3xl px-4 md:px-8 py-8 md:py-12 mx-auto max-w-6xl mb-8 md:mb-16">
+                <div className="flex flex-col lg:flex-row items-center justify-between gap-6 md:gap-12">
+                    <div className="lg:w-1/2 px-4">
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6">
+                            From Pixels to Progress
+                        </h2>
+                        <p className="text-gray-700 text-xs md:text-lg leading-relaxed">
+                            Our journey began four years ago when I started freelancing as a graphic designer while pursuing my degree. Over time, I had the opportunity to collaborate with numerous companies, gaining invaluable experience in digital marketing, UI/UX design, and beyond. This hands-on experience allowed me to understand the unique challenges businesses face in today's competitive landscape.
+                            <br /><br />After a year of freelancing, I was fortunate to connect with a talented team of sales and marketing experts who shared the same vision: to create a company that delivers exceptional results and helps businesses grow. Together, we turned this dream into reality.
+                        </p>
+                    </div>
+
+                    <div className="lg:w-1/2 mt-6 lg:mt-0">
                         <img
-                            src={Rocket}
-                            alt="Rocket illustration"
-                            className="w-48 md:w-64 lg:w-80"
+                            src={journey}
+                            alt="Our Journey Illustration"
+                            className="w-full h-48 md:h-64 lg:h-72 object-contain rounded-lg"
                         />
                     </div>
                 </div>
-                
-                {/* Right side with content */}
-                <div className="w-full md:w-1/2 text-white relative z-10">
-                    <h2 className="text-purple-500 text-3xl mb-4">2+ YEARS</h2>
-                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-                        2+ Years of Turning Brands into Market Leaders.Let's Build Your Success Story.
-                    </h1>
-                    
-                   
-                </div>
             </div>
-        </div>
+        </>
     );
 };
 

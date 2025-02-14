@@ -1,11 +1,9 @@
 import React from 'react';
 import team from '../assets/images/AboutUs.png';
 import journey from '../assets/images/PeopleBench.png';
-import client1 from '../assets/images/image1.png';
-import client2 from '../assets/images/image2.png';
-import client3 from '../assets/images/image3.png';
-import client4 from '../assets/images/image4.png';
+
 import Footer from '../components/Footer';  // Import the Footer component
+import OurClients from '../components/HomePageComponents/OurClients'
 
 const AboutUs = () => {
   return (
@@ -62,27 +60,8 @@ const AboutUs = () => {
           </div>
         </div>
 
-        {/* Clients Section */}
-        <div className="w-full bg-black py-8 md:py-16">
-          <div className="max-w-6xl mx-auto px-4">
-            <h2 className="text-white text-3xl md:text-4xl font-bold text-center mb-8 md:mb-16">Our Clients</h2>
-            
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 items-center justify-items-center">
-              <div className="bg-white p-4 md:p-8 rounded-lg w-full sm:w-48 h-32 md:h-40 flex items-center justify-center">
-                <img src={client1} alt="Client 1" className="w-full h-full object-contain" />
-              </div>
-              <div className="bg-white p-4 md:p-8 rounded-lg w-full sm:w-48 h-32 md:h-40 flex items-center justify-center">
-                <img src={client2} alt="Client 2" className="w-full h-full object-contain" />
-              </div>
-              <div className="bg-white p-4 md:p-8 rounded-lg w-full sm:w-48 h-32 md:h-40 flex items-center justify-center">
-                <img src={client3} alt="Client 3" className="w-full h-full object-contain" />
-              </div>
-              <div className="bg-white p-4 md:p-8 rounded-lg w-full sm:w-48 h-32 md:h-40 flex items-center justify-center">
-                <img src={client4} alt="Client 4" className="w-full h-full object-contain" />
-              </div>
-            </div>
-          </div>
-        </div>
+        <OurClients />
+
       </div>
       
       {/* Footer Component */}
