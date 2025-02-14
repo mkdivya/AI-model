@@ -5,13 +5,25 @@ import {
   MapPin,
   Facebook,
   Instagram,
-  Linkedin,
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
 const ContactUs = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Get input values
+    const firstName = e.target[0].value;
+    const lastName = e.target[1].value;
+    const email = e.target[2].value;
+    const phone = e.target[3].value;
+
+    // Construct the WhatsApp message
+    const message = `Hello, I am ${firstName} ${lastName}. My email is ${email} and my phone number is ${phone}. I would like to get in touch.`;
+
+    // Encode the message and redirect to WhatsApp
+    const whatsappURL = `https://wa.me/918867570215?text=${encodeURIComponent(message)}`;
+    window.open(whatsappURL, "_blank");
   };
 
   return (
@@ -23,7 +35,7 @@ const ContactUs = () => {
 
         <div className="bg-white rounded-2xl p-4 sm:p-6 lg:p-8 grid md:grid-cols-2 gap-6 lg:gap-8">
           {/* Contact Information Section */}
-          <div className="bg-[#0A0B1A] rounded-xl p-4 sm:p-6 lg:p-8 relative overflow-hidden">
+          <div className="bg-[#0A0B1A] rounded-xl p-4 sm:p-6 lg:p-8">
             <h2 className="text-white text-lg sm:text-xl font-semibold mb-2">
               Contact Information
             </h2>
@@ -31,7 +43,7 @@ const ContactUs = () => {
               Say something to start a chat!
             </p>
 
-            <div className="space-y-6 sm:space-y-8 relative z-10 mb-8">
+            <div className="space-y-6 sm:space-y-8 mb-8">
               <div className="flex items-center text-white gap-4">
                 <Phone className="w-5 h-5 flex-shrink-0" />
                 <span className="text-sm sm:text-base">+91 88675 70215</span>
@@ -52,7 +64,7 @@ const ContactUs = () => {
               </div>
             </div>
 
-            <div className="flex justify-start gap-4 relative z-10">
+            <div className="flex justify-start gap-4">
               <a
                 href="https://www.facebook.com/share/1A3CR5mwDW/"
                 target="_blank"
@@ -91,6 +103,7 @@ const ContactUs = () => {
                   type="text"
                   className="w-full px-3 sm:px-4 py-2 text-sm sm:text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
                   placeholder="First Name"
+                  required
                 />
               </div>
               <div>
@@ -101,6 +114,7 @@ const ContactUs = () => {
                   type="text"
                   className="w-full px-3 sm:px-4 py-2 text-sm sm:text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
                   placeholder="Last Name"
+                  required
                 />
               </div>
             </div>
@@ -111,6 +125,7 @@ const ContactUs = () => {
                 type="email"
                 className="w-full px-3 sm:px-4 py-2 text-sm sm:text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 placeholder="Email"
+                required
               />
             </div>
 
@@ -121,7 +136,8 @@ const ContactUs = () => {
               <input
                 type="tel"
                 className="w-full px-3 sm:px-4 py-2 text-sm sm:text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                placeholder="+1 (555) 000-0000"
+                placeholder="+91 88675 70215"
+                required
               />
             </div>
 

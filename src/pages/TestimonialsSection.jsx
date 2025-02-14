@@ -1,32 +1,32 @@
 import React, { useState } from 'react';
-import rahulImage from '../assets/images/Rocket.png';
-import sarahImage from '../assets/images/Rocket.png';
-import michaelImage from '../assets/images/Rocket.png';
+import rahulImage from '../assets/images/Test1.jpg';
+import sarahImage from '../assets/images/Test2.jpg';
+import michaelImage from '../assets/images/Test3.jpg';
 
 const TestimonialsSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  
+
   const testimonials = [
     {
       id: 1,
       name: 'Rahul Singh',
       role: 'Freelancer',
       image: rahulImage,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+      text: 'Exceptional work! Delivered on time with great attention to detail. Highly recommend for any digital projects.'
     },
     {
       id: 2,
-      name: 'Sarah Johnson',
+      name: 'Akhil Aryan',
       role: 'Designer',
       image: sarahImage,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.'
+      text: 'Amazing creativity and professionalism! The designs exceeded our expectations and perfectly captured our brand vision.'
     },
     {
       id: 3,
       name: 'Michael Chen',
       role: 'Developer',
       image: michaelImage,
-      text: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+      text: 'Highly skilled and efficient! Built a seamless, responsive website that improved our user experience significantly.'
     }
   ];
 
@@ -53,12 +53,12 @@ const TestimonialsSection = () => {
 
         <div className="relative flex gap-8 h-96">
           {testimonials.slice(activeIndex, activeIndex + 2).map((testimonial, idx) => (
-            <div 
+            <div
               key={testimonial.id}
               className={`absolute transition-all duration-500 w-full md:w-1/2 flex flex-col items-center
                 ${idx === 0 ? 'left-0 opacity-100 z-20' : 'left-1/2 opacity-50 blur-sm z-10'}`}
             >
-              <img 
+              <img
                 src={testimonial.image}
                 alt={testimonial.name}
                 className="w-24 h-24 rounded-full mb-4 object-cover"
@@ -72,7 +72,7 @@ const TestimonialsSection = () => {
 
         <div className="absolute bottom-8 right-8 flex items-center gap-4">
           {activeIndex > 0 && (
-            <button 
+            <button
               onClick={handlePrev}
               className="text-gray-400 flex items-center gap-2 hover:text-gray-300 transition-colors"
             >
@@ -82,9 +82,9 @@ const TestimonialsSection = () => {
               <span className="text-sm">PREVIOUS</span>
             </button>
           )}
-          
+
           {activeIndex < testimonials.length - 1 && (
-            <button 
+            <button
               onClick={handleNext}
               className="text-gray-400 flex items-center gap-2 hover:text-gray-300 transition-colors"
             >
