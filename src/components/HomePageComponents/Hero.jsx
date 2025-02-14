@@ -17,7 +17,7 @@ const Hero = () => {
 
       {/* WhatsApp Icon */}
       <a
-        href="https://wa.me/918867570215"
+        href="https://w.app/pixelamediahassan"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 bg-green-400 text-white p-4 rounded-full shadow-lg hover:bg-green-500 transition-transform transform hover:scale-110 z-50 mr-10"
